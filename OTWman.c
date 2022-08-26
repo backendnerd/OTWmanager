@@ -16,13 +16,13 @@ int main(int argc, char *argv[])
 {
     if(argc < 3)
     {
-        printf("\nUSAGE: ./%s LEVEL PASSWORD\n", argv[0]);
+        printf("\nUSAGE: ./%s LEVEL PASSWORD\n\n", argv[0]);
         return 1;
     }
 
     FILE *fptr; // file pointer
 
-    fptr = fopen("/home/d4wg/Desktop/c/OTWlogs/OTWlogs.txt", "a+");
+    fptr = fopen("/home/d4wg/Desktop/OTWlogs.txt", "a+");
 
     if(fptr == NULL){
         printf("Something went wront. Error code 1.\n");
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 
 
     fprintf(fptr, "%s", argv[1]);
-    for(int i = 0; i <= 16 - len(argv[1]) - 1 ; i++)
+    for(int i = 0; i <= 16 - len(argv[1]); i++)
     {
         fprintf(fptr, " ");
     }
