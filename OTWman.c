@@ -12,10 +12,14 @@ int len(char string[])
 }
 
 
-int main(int argc, char **argv[])
+int main(int argc, char *argv[])
 {
-    char level[33];
-    char password[99];
+    if(argc < 3)
+    {
+        printf("\nUSAGE: ./%s LEVEL PASSWORD\n", argv[0]);
+        return 1;
+    }
+
     FILE *fptr; // file pointer
 
     fptr = fopen("/home/d4wg/Desktop/c/OTWlogs/OTWlogs.txt", "a+");
@@ -26,19 +30,14 @@ int main(int argc, char **argv[])
     }
 
 
-    printf("Enter your current Level: ");
-    scanf("%s", level);
 
-    printf("Enter The Password for the Next Level: ");
-    scanf("%s", password);
-
-    fprintf(fptr, "%s", level);
-    for(int i = 0; i <= 16 - len(level) ; i++)
+    fprintf(fptr, "%s", argv[1]);
+    for(int i = 0; i <= 16 - len(argv[1]) - 1 ; i++)
     {
         fprintf(fptr, " ");
     }
 
-    fprintf(fptr, "-    %s\n", password);
+    fprintf(fptr, "-    %s\n", argv[2]);
     fclose(fptr);
 
     return 0;
