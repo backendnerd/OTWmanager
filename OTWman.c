@@ -14,7 +14,7 @@ int len(char string[])
 
 int main(int argc, char *argv[])
 {
-    if(argc < 3)
+    if(argc != 3)
     {
         printf("\nUSAGE: ./%s LEVEL PASSWORD\n\n", argv[0]);
         return 1;
