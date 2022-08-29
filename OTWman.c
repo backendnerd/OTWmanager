@@ -1,5 +1,3 @@
-// hi aymen
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -42,7 +40,5 @@ int main(int argc, char *argv[])
     fprintf(fptr, "-    %s\n", argv[2]);
     fclose(fptr);
 
-    printf("Aymeeeeeen");
-    
     return 0;
 }
