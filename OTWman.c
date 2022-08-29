@@ -41,6 +41,8 @@ int main(int argc, char *argv[])
 
     fprintf(fptr, "-    %s\n", argv[2]);
     fclose(fptr);
-
+    
+    printf("Courier 6 WAS HERE!!!");
+    
     return 0;
 }
